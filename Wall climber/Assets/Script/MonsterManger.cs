@@ -24,8 +24,8 @@ public class MonsterManger: MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        SmallMonster_ReapeatTime = 4f;
-        BigMonster_ReapeatTime = 10f;
+        SmallMonster_ReapeatTime = 9f;
+        BigMonster_ReapeatTime = 20f;
         Ingame = Gamemanger.GetComponent<GameManger>().InGame;
         score = int.Parse(Currentscore.text);
         
@@ -52,8 +52,8 @@ public class MonsterManger: MonoBehaviour {
 	}
     public void Start_SmallMonster()
     {
-        InvokeRepeating("MakeLeft_SmallMonster", 3f, SmallMonster_ReapeatTime);
-        InvokeRepeating("MakeRight_SmallMonster", 4f, (SmallMonster_ReapeatTime + 1f));
+        InvokeRepeating("MakeLeft_SmallMonster", 5f, SmallMonster_ReapeatTime);
+        InvokeRepeating("MakeRight_SmallMonster", 7f, (SmallMonster_ReapeatTime + 1f));
     }
     public void Start_BigMonster()
     {

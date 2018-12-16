@@ -23,7 +23,7 @@ public class PlayerMovment : MonoBehaviour {
     public int Driection; //0 for left; and 1 for right
     private bool OnGround;
 	void Start () {
-        Movespeed = 100;
+       // Movespeed = 80;
         JumpSpeed = 360;
         InGame = false;
         OnGround = true;

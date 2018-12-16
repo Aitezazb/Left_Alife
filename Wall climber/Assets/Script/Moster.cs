@@ -3,13 +3,14 @@ using UnityEngine;
 
 public class Moster : MonoBehaviour {
 
-    private float speed;
+    
     public Image HealthBar;
     Canvas ca;
     private float power;
+    private float speed;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
         speed = 0.8f;
         power = 0.1f;
@@ -18,7 +19,7 @@ public class Moster : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-       //this.transform.Translate(Vector2.right *speed * Time.deltaTime);
+       this.transform.Translate(Vector2.right *speed * Time.deltaTime);
     }
     void OnCollisionEnter2D(Collision2D coll)
     {
