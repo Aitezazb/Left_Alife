@@ -29,11 +29,11 @@ public class Small_MonsterRight : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.gameObject.tag == "Player")
-        {
-            //Gamover
-            Debug.Log("Game Over");
-        }
+        //if (coll.gameObject.tag == "Player")
+        //{
+        //    //Gamover
+        //    Debug.Log("Game Over");
+        //}
         if (coll.gameObject.tag == "Bullet")
         {
             if (HealthBar.fillAmount > 0)

@@ -14,6 +14,13 @@ public class GameManger : MonoBehaviour {
     public GameObject CurrentScore;
     public GameObject BuyCoinsPage;
     public GameObject UpgradeGuns;
+
+    public void GameOver()
+    {
+        MonsterManager.GetComponent<MonsterManger>().CancelInvoke();
+        Start();
+    }
+
     public GameObject MonsterManager;
 
     public Text Score;

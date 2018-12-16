@@ -58,10 +58,10 @@ GameObject:
   - component: {fileID: 95719260503688022}
   - component: {fileID: 60901055266814408}
   - component: {fileID: 50206528635554200}
-  - component: {fileID: 114991180030196654}
+  - component: {fileID: 114967314203948730}
   m_Layer: 0
   m_Name: Bigmonster Right
-  m_TagString: Untagged
+  m_TagString: Emeny
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -310,7 +310,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114991180030196654
+--- !u!114 &114967314203948730
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -318,7 +318,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1502416262481044}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47f1fac1f3d8ace41bcd475732d172f5, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ac85406700335242875ebc80f47139d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Damagepower: 0

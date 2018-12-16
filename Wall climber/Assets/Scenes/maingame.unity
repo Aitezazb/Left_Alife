@@ -283,7 +283,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.047500003, y: 0.10783333}
   m_AnchorMax: {x: 0.123750016, y: 0.25175}
-  m_AnchoredPosition: {x: -1, y: 5.244606}
+  m_AnchoredPosition: {x: -1, y: 5.244629}
   m_SizeDelta: {x: 9, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &29483880
@@ -834,7 +834,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0.122500114, y: 0.048}
   m_AnchorMax: {x: 0.23375013, y: 0.21466666}
-  m_AnchoredPosition: {x: 7.500061, y: -0.6000366}
+  m_AnchoredPosition: {x: 7.500061, y: -0.60009766}
   m_SizeDelta: {x: 11, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &108012056
@@ -4350,7 +4350,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.1825, y: 0.037166666}
   m_AnchorMax: {x: 0.82250005, y: 0.25175}
-  m_AnchoredPosition: {x: 2.1999817, y: -4.299988}
+  m_AnchoredPosition: {x: 2.1999817, y: -4.2999268}
   m_SizeDelta: {x: -1.699939, y: -8.7}
   m_Pivot: {x: 0.5, y: 0.49999988}
 --- !u!1 &777982629
@@ -4791,7 +4791,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.038750082, y: 0.09316649}
   m_AnchorMax: {x: 0.12624992, y: 0.24200001}
-  m_AnchoredPosition: {x: 0.54589844, y: 1.7000122}
+  m_AnchoredPosition: {x: 0.54589844, y: 1.6996841}
   m_SizeDelta: {x: -0.004699707, y: -0.0033569336}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &885398670
@@ -7093,7 +7093,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.34, y: 0.24200001}
   m_AnchorMax: {x: 0.45000002, y: 0.40658274}
-  m_AnchoredPosition: {x: 0.7999878, y: 3.4000397}
+  m_AnchoredPosition: {x: 0.7999878, y: 3.4000244}
   m_SizeDelta: {x: -28, y: -3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1276677709
@@ -11104,7 +11104,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0049438477}
+  m_AnchoredPosition: {x: 0, y: 0.005004883}
   m_SizeDelta: {x: 0, y: 0.0099487}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1809412354
@@ -11320,9 +11320,10 @@ MonoBehaviour:
   PlayerPosition_Startmenu: {fileID: 536259294}
   GameEnviroment: {fileID: 1142963821}
   CurrentScore: {fileID: 1187941402}
-  BuyCoinsPage: {fileID: 952625512}
+  BuyCoinsPage: {fileID: 587869081}
   UpgradeGuns: {fileID: 1800685589}
   MonsterManager: {fileID: 1886669908}
+  Score: {fileID: 2137026147}
   InGame: 0
 --- !u!1 &1819703794
 GameObject:
@@ -12859,7 +12860,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.093513325, y: 0.17358328}
   m_AnchorMax: {x: 1, y: 0.8504094}
-  m_AnchoredPosition: {x: 0.5999985, y: 2.5999994}
+  m_AnchoredPosition: {x: 0.5999985, y: 2.600006}
   m_SizeDelta: {x: -1.1999998, y: -2.1999998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2137026147

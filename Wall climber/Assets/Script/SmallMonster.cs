@@ -21,7 +21,7 @@ public class SmallMonster : MonoBehaviour {
         HealthBar = gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.GetComponent<Image>();
         UpGradeGun = GameObject.Find("UpGrade Gun Manger");
         Damagepower = UpGradeGun.GetComponent<UpgradeGunManger>().Get_CurrentGun();
-        Debug.Log("DamagePowr" + Damagepower);
+      
     }
     // Update is called once per frame
     void Update()
@@ -30,11 +30,11 @@ public class SmallMonster : MonoBehaviour {
     }
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.gameObject.tag == "Player")
-        {
-            //Gamover
-            Debug.Log("Game Over");
-        }
+        //if (coll.gameObject.tag == "Player")
+        //{
+        //    //Gamover
+        //    Debug.Log("Game Over");
+        //}
         if (coll.gameObject.tag == "Bullet")
         {
             if (HealthBar.fillAmount > 0)
