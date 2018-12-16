@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManger : MonoBehaviour {
 
@@ -13,6 +14,9 @@ public class GameManger : MonoBehaviour {
     public GameObject CurrentScore;
     public GameObject BuyCoinsPage;
     public GameObject UpgradeGuns;
+    public GameObject MonsterManager;
+
+    public Text Score;
 
     public bool InGame;
     // Use this for initialization
@@ -38,6 +42,7 @@ public class GameManger : MonoBehaviour {
     public void StartGame_Onclick()
     {
         InGame = true;
+        MonsterManager.GetComponent<MonsterManger>().GameStarted();
         StartGame();
         Player.SetActive(true);
     }
@@ -48,6 +53,13 @@ public class GameManger : MonoBehaviour {
         AddPlayerComponents();
         EnableGameEnviroment();
     }
+
+    public void UpdateScore()
+    {
+        Score.text = (int.Parse(Score.text) + 1).ToString();
+        MonsterManager.GetComponent<MonsterManger>().ScoreChanged();
+    }
+
     void DisableStartPage()
     {
         MainPage_UI.SetActive(false);

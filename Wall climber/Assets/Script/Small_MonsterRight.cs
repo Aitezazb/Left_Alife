@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Small_MonsterRight : MonoBehaviour
 {
+    private GameObject gameManager;
 
     private float speed;
     private Image HealthBar;
@@ -13,11 +14,13 @@ public class Small_MonsterRight : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        gameManager = GameObject.Find("GameManger");
         speed = 0.8f;
         Damagepower = 0f;
         HealthBar = gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.GetComponent<Image>();
         UpGradeGun = GameObject.Find("UpGrade Gun Manger");
         Damagepower = UpGradeGun.GetComponent<UpgradeGunManger>().Get_CurrentGun();
+        Debug.Log("DamagePowr" + Damagepower);
     }
     // Update is called once per frame
     void Update()
@@ -39,7 +42,9 @@ public class Small_MonsterRight : MonoBehaviour
             }
             else
             {
+                gameManager.GetComponent<GameManger>().UpdateScore();
                 killMoster();
+
             }
         }
 
@@ -53,6 +58,5 @@ public class Small_MonsterRight : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
 }
 
