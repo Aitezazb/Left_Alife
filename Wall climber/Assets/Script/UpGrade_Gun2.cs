@@ -21,7 +21,7 @@ public class UpGrade_Gun2 : MonoBehaviour
         NextUpGradeAmount.text = gun2.NextUpGradeCoinAmount.ToString();
         CurrentActive = gun2.CurrentActived;
         Damagepower = gun2.Damage;
-        Debug.Log("Gun 2 " + gun2.Locked);
+
         if (gun2.Locked == false)
         {
             Debug.Log("in it");

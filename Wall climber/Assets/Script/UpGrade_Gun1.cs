@@ -23,7 +23,7 @@ public class UpGrade_Gun1 : MonoBehaviour
         Damagepower = gun1.Damage;
         if(gun1.Locked == false)
         {
-            Debug.Log("in it");
+
             UpgradeManger.GetComponent<UpgradeGunManger>().Unlock_Gun1();
         }
         if(gun1.CurrentUpGradeLevel >= 1)
