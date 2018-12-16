@@ -15,29 +15,35 @@ public class GameManger : MonoBehaviour {
     public GameObject BuyCoinsPage;
     public GameObject UpgradeGuns;
 
-    public void GameOver()
-    {
-        MonsterManager.GetComponent<MonsterManger>().CancelInvoke();
-        Start();
-    }
+   
 
     public GameObject MonsterManager;
 
+    public Text HighScore;
     public Text Score;
 
     public bool InGame;
     // Use this for initialization
     void Start() {
         InGame = false;
+        HighScore.text = PlayerPrefs.GetInt("HighScore").ToString();
         GameEnviroment.SetActive(false);
         CurrentScore.SetActive(false);
     }
-
+ public void GameOver()
+    {
+        MonsterManager.GetComponent<MonsterManger>().GameOver();
+        Start();
+        ShowMainMenu();
+        BuyCoinsPage.SetActive(true);
+        ResetScore();
+    }
     public void ShowMainMenu()
     {
         InGame = false;
         CloseAllPages();
         Player.SetActive(true);
+        Destroy(Player.GetComponent<Rigidbody2D>());
         Player.transform.position = PlayerPosition_Startmenu.transform.position;
         MainPage_UI.SetActive(true);
     }
@@ -45,6 +51,17 @@ public class GameManger : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
+    }
+    private void ResetScore()
+    {
+        var score = int.Parse(Score.text);
+
+        if(score > int.Parse(HighScore.text))
+        {
+            HighScore.text = score.ToString();
+            PlayerPrefs.SetInt("HighScore",score);
+        }
+        Score.text = "0";
     }
     public void StartGame_Onclick()
     {

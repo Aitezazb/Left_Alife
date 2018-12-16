@@ -12,7 +12,7 @@ public class PlayerMovment : MonoBehaviour {
     private Rigidbody2D rd;
     private Animator anim;
     public int Movespeed;
-    public int JumpSpeed ;
+    public int JumpSpeed;
 
 
     public bool InGame;
@@ -35,11 +35,11 @@ public class PlayerMovment : MonoBehaviour {
    
 	void Update ()
     {
-        if(clicked_Left)
+        if(clicked_Left && rd != null)
         {
             rd.velocity = new Vector2(-Movespeed * Time.deltaTime, rd.velocity.y);
         }
-        if(clicked_Right)
+        if(clicked_Right && rd != null)
         {
             rd.velocity = new Vector2(Movespeed * Time.deltaTime, rd.velocity.y);
         }

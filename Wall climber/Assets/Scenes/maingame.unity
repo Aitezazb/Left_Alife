@@ -3102,10 +3102,10 @@ RectTransform:
   m_Father: {fileID: 772462013}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.606}
+  m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -1}
-  m_SizeDelta: {x: 0, y: 2}
+  m_AnchoredPosition: {x: 0, y: -0.0000038146973}
+  m_SizeDelta: {x: 0, y: 0.0000076294}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &525200056
 MonoBehaviour:
@@ -4791,7 +4791,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.038750082, y: 0.09316649}
   m_AnchorMax: {x: 0.12624992, y: 0.24200001}
-  m_AnchoredPosition: {x: 0.54589844, y: 1.6996841}
+  m_AnchoredPosition: {x: 0.54589844, y: 1.6993408}
   m_SizeDelta: {x: -0.004699707, y: -0.0033569336}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &885398670
@@ -5536,6 +5536,7 @@ GameObject:
   - component: {fileID: 1080557264}
   - component: {fileID: 1080557262}
   - component: {fileID: 1080557261}
+  - component: {fileID: 1080557263}
   m_Layer: 0
   m_Name: Player_idleright
   m_TagString: Player
@@ -5558,7 +5559,7 @@ MonoBehaviour:
   RightGunPoint: {fileID: 1770685912}
   BulletGameObject: {fileID: 1472889727159996, guid: 0a0c49dd056773e42a765e8c20e1f23e,
     type: 2}
-  Movespeed: 5
+  Movespeed: 10
   JumpSpeed: 300
   InGame: 0
   clicked_Left: 0
@@ -5631,6 +5632,18 @@ PolygonCollider2D:
       - {x: 0.195, y: -0.003196299}
     - - {x: -0.024999999, y: -0.235}
       - {x: -0.024999999, y: -0.275}
+--- !u!114 &1080557263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1080557260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 877a6bb8e40f44549bf8718076e44eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManger: {fileID: 1818118019}
 --- !u!95 &1080557264
 Animator:
   serializedVersion: 3
@@ -7093,7 +7106,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.34, y: 0.24200001}
   m_AnchorMax: {x: 0.45000002, y: 0.40658274}
-  m_AnchoredPosition: {x: 0.7999878, y: 3.4000244}
+  m_AnchoredPosition: {x: 0.7999878, y: 3.3999786}
   m_SizeDelta: {x: -28, y: -3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1276677709
@@ -10237,7 +10250,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.64624995, y: 0.106417276}
   m_AnchorMax: {x: 0.7524999, y: 0.2691665}
-  m_AnchoredPosition: {x: 0.95996094, y: 0.5}
+  m_AnchoredPosition: {x: 0.95996094, y: 0.49999237}
   m_SizeDelta: {x: -25, y: -2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1681402376
@@ -11272,7 +11285,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.7625002, y: 0.14400001}
   m_AnchorMax: {x: 0.86625034, y: 0.22900002}
-  m_AnchoredPosition: {x: 1.1599731, y: 1.5}
+  m_AnchoredPosition: {x: 1.1599731, y: 1.4999313}
   m_SizeDelta: {x: 1, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1818118019
@@ -11323,6 +11336,7 @@ MonoBehaviour:
   BuyCoinsPage: {fileID: 587869081}
   UpgradeGuns: {fileID: 1800685589}
   MonsterManager: {fileID: 1886669908}
+  HighScore: {fileID: 1538891818}
   Score: {fileID: 2137026147}
   InGame: 0
 --- !u!1 &1819703794

@@ -35,9 +35,19 @@ public class MonsterManger: MonoBehaviour {
         score = int.Parse(Currentscore.text);
         
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    internal void GameOver()
+    {
+        CancelInvoke();
+        var clones = GameObject.FindGameObjectsWithTag("Emeny");
+         foreach (var clone in clones)
+        {
+            Destroy(clone);
+        }
+    }
+
+    // Update is called once per frame
+    void Update ()
     {
        
 	}

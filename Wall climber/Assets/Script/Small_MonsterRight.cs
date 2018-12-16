@@ -20,7 +20,7 @@ public class Small_MonsterRight : MonoBehaviour
         HealthBar = gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.GetComponent<Image>();
         UpGradeGun = GameObject.Find("UpGrade Gun Manger");
         Damagepower = UpGradeGun.GetComponent<UpgradeGunManger>().Get_CurrentGun();
-        Debug.Log("DamagePowr" + Damagepower);
+        
     }
     // Update is called once per frame
     void Update()

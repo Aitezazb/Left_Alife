@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class PlayerCollision : MonoBehaviour {
 
-    private GameObject gameManger;
+    public GameObject gameManger;
 
 	// Use this for initialization
 	void Start () {
