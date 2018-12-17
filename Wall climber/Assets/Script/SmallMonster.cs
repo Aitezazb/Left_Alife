@@ -1,11 +1,12 @@
 ﻿using UnityEngine.UI;
 using UnityEngine;
+using UnityEditor;
 
 public class SmallMonster : MonoBehaviour {
 
 
     private GameObject gameManager;
-
+    private GameObject particularManager;
     private float speed;
     private Image HealthBar;
     Canvas ca;
@@ -15,6 +16,7 @@ public class SmallMonster : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        particularManager = GameObject.Find("ParticularManger");
         gameManager = GameObject.Find("GameManger");
         speed = 0.8f;
         Damagepower = 0f;
@@ -52,6 +54,7 @@ public class SmallMonster : MonoBehaviour {
     }
     void killMoster()
     {
+        particularManager.GetComponent<ParticularManger>().MakeBlood(this.transform.position);
         Destroy(gameObject);
     }
 }

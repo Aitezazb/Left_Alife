@@ -1,10 +1,10 @@
 ﻿using UnityEngine.UI;
 using UnityEngine;
+using UnityEditor;
 
 public class Small_MonsterRight : MonoBehaviour
 {
     private GameObject gameManager;
-
     private float speed;
     private Image HealthBar;
     Canvas ca;

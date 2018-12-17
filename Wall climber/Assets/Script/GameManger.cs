@@ -30,7 +30,7 @@ public class GameManger : MonoBehaviour {
         GameEnviroment.SetActive(false);
         CurrentScore.SetActive(false);
     }
- public void GameOver()
+    public void GameOver()
     {
         MonsterManager.GetComponent<MonsterManger>().GameOver();
         Start();
