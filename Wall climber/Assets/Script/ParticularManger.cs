@@ -21,7 +21,7 @@ public class ParticularManger : MonoBehaviour {
 
         //_transform.z = -4.115f;
         _transform.z = BloodPrefab.transform.position.z;
-        var s = Instantiate(BloodPrefab, _transform, Quaternion.identity);
+        Instantiate(BloodPrefab, _transform, Quaternion.identity);
         
     }
 }

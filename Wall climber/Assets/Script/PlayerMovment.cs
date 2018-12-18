@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Animations;
 
 public class PlayerMovment : MonoBehaviour {
+    
 
     public Transform LeftGunPoint;
     public Transform RightGunPoint;
@@ -13,7 +14,6 @@ public class PlayerMovment : MonoBehaviour {
     private Animator anim;
     public int Movespeed;
     public int JumpSpeed;
-
 
     public bool InGame;
     public bool clicked_Left;
@@ -35,15 +35,48 @@ public class PlayerMovment : MonoBehaviour {
    
 	void Update ()
     {
-        if(clicked_Left && rd != null)
+        if (InGame)
         {
-            rd.velocity = new Vector2(-Movespeed * Time.deltaTime, rd.velocity.y);
+            if (clicked_Left && rd != null)
+            {
+                rd.velocity = new Vector2(-Movespeed * Time.deltaTime, rd.velocity.y);
+            }
+            if (clicked_Right && rd != null)
+            {
+                rd.velocity = new Vector2(Movespeed * Time.deltaTime, rd.velocity.y);
+            }
+            //For mobile input
+
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                MoveLeft_OnClickDown();
+            }
+            if (Input.GetKeyUp(KeyCode.LeftArrow))
+            {
+                MoveLeft_OnclickUP();
+            }
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                MoveRight_OnClickDown();
+            }
+            if (Input.GetKeyUp(KeyCode.RightArrow))
+            {
+                MoveRight_OnClickUp();
+            }
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                Jumb_OnClickDown();
+            }
+            if (Input.GetKeyUp(KeyCode.UpArrow))
+            {
+                Jumb_onClickUp();
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                Shoot_OnClick();
+            }
         }
-        if(clicked_Right && rd != null)
-        {
-            rd.velocity = new Vector2(Movespeed * Time.deltaTime, rd.velocity.y);
-        }
-	}
+    }
     public void RigidBody_Add()
     {
         InGame = true;

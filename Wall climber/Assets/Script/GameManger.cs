@@ -44,6 +44,7 @@ public class GameManger : MonoBehaviour {
         CloseAllPages();
         Player.SetActive(true);
         Destroy(Player.GetComponent<Rigidbody2D>());
+        Player.GetComponent<PlayerMovment>().InGame = false;
         Player.transform.position = PlayerPosition_Startmenu.transform.position;
         MainPage_UI.SetActive(true);
     }
