@@ -45,6 +45,10 @@ public class SmallMonster : MonoBehaviour {
 
             }
         }
+        if (coll.gameObject.tag == "Emeny")
+        {
+            killMoster();
+        }
 
     }
     void ReduceHealth()

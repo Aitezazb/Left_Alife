@@ -142,20 +142,25 @@ public class PlayerMovment : MonoBehaviour {
     }
     public void Shoot_OnClick()
     {
-        switch (Driection)
+        var bulletCount = GameObject.FindGameObjectsWithTag("Bullet");
+        
+        if(bulletCount.Length <= 5)
         {
-            case 0:
-                {
-                    var s = Instantiate(BulletGameObject, LeftGunPoint.position, Quaternion.identity);
-                    s.GetComponent<Bulletfire>().Dir = 0;
-                    break;
-                }
-            case 1:
-                {
-                    var s=Instantiate(BulletGameObject, RightGunPoint.position, Quaternion.identity);
-                    s.GetComponent<Bulletfire>().Dir = 1;
-                    break;
-                }
+            switch (Driection)
+            {
+                case 0:
+                    {
+                        var s = Instantiate(BulletGameObject, LeftGunPoint.position, Quaternion.identity);
+                        s.GetComponent<Bulletfire>().Dir = 0;
+                        break;
+                    }
+                case 1:
+                    {
+                        var s = Instantiate(BulletGameObject, RightGunPoint.position, Quaternion.identity);
+                        s.GetComponent<Bulletfire>().Dir = 1;
+                        break;
+                    }
+            }
         }
     }
     void OnCollisionEnter2D(Collision2D coll)
