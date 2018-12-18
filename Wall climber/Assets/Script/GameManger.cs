@@ -15,7 +15,7 @@ public class GameManger : MonoBehaviour {
     public GameObject BuyCoinsPage;
     public GameObject UpgradeGuns;
     public GameObject killAll;
-   
+    public CameraShake cameraShake;
 
     public GameObject MonsterManager;
 
@@ -32,6 +32,7 @@ public class GameManger : MonoBehaviour {
     }
     public void GameOver()
     {
+        StartCoroutine(cameraShake.Shake(.35f,.10f));
         MonsterManager.GetComponent<MonsterManger>().GameOver();
         Start();
         ShowMainMenu();
