@@ -9,7 +9,10 @@ public class PlayerMovment : MonoBehaviour {
 
     public Transform LeftGunPoint;
     public Transform RightGunPoint;
+
     public GameObject BulletGameObject;
+    public GameObject fireSmoke;
+
     private Rigidbody2D rd;
     private Animator anim;
     public int Movespeed;
@@ -161,12 +164,14 @@ public class PlayerMovment : MonoBehaviour {
                     {
                         var s = Instantiate(BulletGameObject, LeftGunPoint.position, Quaternion.identity);
                         s.GetComponent<Bulletfire>().Dir = 0;
+                        Instantiate(fireSmoke, LeftGunPoint.position, Quaternion.identity);
                         break;
                     }
                 case 1:
                     {
                         var s = Instantiate(BulletGameObject, RightGunPoint.position, Quaternion.identity);
                         s.GetComponent<Bulletfire>().Dir = 1;
+                        Instantiate(fireSmoke, new Vector3(RightGunPoint.position.x, RightGunPoint.position.y,-0.5f), Quaternion.identity);
                         break;
                     }
             }

@@ -1372,7 +1372,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.69750005, y: 0.029000001}
   m_AnchorMax: {x: 0.8187501, y: 0.23500001}
-  m_AnchoredPosition: {x: 1.3999939, y: 3.7878423}
+  m_AnchoredPosition: {x: 1.3999939, y: 3.7878418}
   m_SizeDelta: {x: 3, y: -2.776001}
   m_Pivot: {x: 0.5, y: 0.50000006}
 --- !u!114 &137110907
@@ -4808,7 +4808,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.1825, y: 0.037166666}
   m_AnchorMax: {x: 0.82250005, y: 0.25175}
-  m_AnchoredPosition: {x: 2.1999817, y: -4.2999344}
+  m_AnchoredPosition: {x: 2.1999817, y: -4.2999268}
   m_SizeDelta: {x: -1.699939, y: -8.7}
   m_Pivot: {x: 0.5, y: 0.49999988}
 --- !u!1 &777982629
@@ -5018,52 +5018,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 805879778}
   m_CullTransparentMesh: 0
---- !u!1001 &811455327
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4026172128730042, guid: 084f73f6bb98d5a41b258161685c8245, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.684
-      objectReference: {fileID: 0}
-    - target: {fileID: 4026172128730042, guid: 084f73f6bb98d5a41b258161685c8245, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.646
-      objectReference: {fileID: 0}
-    - target: {fileID: 4026172128730042, guid: 084f73f6bb98d5a41b258161685c8245, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4026172128730042, guid: 084f73f6bb98d5a41b258161685c8245, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4026172128730042, guid: 084f73f6bb98d5a41b258161685c8245, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4026172128730042, guid: 084f73f6bb98d5a41b258161685c8245, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4026172128730042, guid: 084f73f6bb98d5a41b258161685c8245, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4026172128730042, guid: 084f73f6bb98d5a41b258161685c8245, type: 2}
-      propertyPath: m_RootOrder
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1040846066754434, guid: 084f73f6bb98d5a41b258161685c8245, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 084f73f6bb98d5a41b258161685c8245, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &814106157
 GameObject:
   m_ObjectHideFlags: 0
@@ -5849,7 +5803,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.86125004, y: 0}
   m_AnchorMax: {x: 0.98, y: 0.23500001}
-  m_AnchoredPosition: {x: -1.5999756, y: 7.180046}
+  m_AnchoredPosition: {x: -1.5999756, y: 7.1800537}
   m_SizeDelta: {x: 5, y: -9.559998}
   m_Pivot: {x: 0.5, y: 0.50000006}
 --- !u!114 &941415392
@@ -6871,6 +6825,7 @@ MonoBehaviour:
   RightGunPoint: {fileID: 1770685912}
   BulletGameObject: {fileID: 1472889727159996, guid: 0a0c49dd056773e42a765e8c20e1f23e,
     type: 2}
+  fireSmoke: {fileID: 1132879954308180, guid: 2a1493d503bf7d941a39ccc58f14c3c7, type: 2}
   Movespeed: 30
   JumpSpeed: 300
   InGame: 0
