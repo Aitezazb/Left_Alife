@@ -45,6 +45,10 @@ public class SmallMonster : MonoBehaviour {
 
             }
         }
+        if(coll.gameObject.tag == "RainBullet")
+        {
+            killMoster();
+        }
         if (coll.gameObject.tag == "Emeny")
         {
             killMoster();

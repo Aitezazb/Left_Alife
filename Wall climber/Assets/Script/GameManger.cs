@@ -14,7 +14,7 @@ public class GameManger : MonoBehaviour {
     public GameObject CurrentScore;
     public GameObject BuyCoinsPage;
     public GameObject UpgradeGuns;
-
+    public GameObject killAll;
    
 
     public GameObject MonsterManager;
@@ -44,9 +44,16 @@ public class GameManger : MonoBehaviour {
         CloseAllPages();
         Player.SetActive(true);
         Destroy(Player.GetComponent<Rigidbody2D>());
-        Player.GetComponent<PlayerMovment>().InGame = false;
+        
+        ResetPlayer();
         Player.transform.position = PlayerPosition_Startmenu.transform.position;
         MainPage_UI.SetActive(true);
+    }
+
+    private void ResetPlayer()
+    {
+        Player.GetComponent<PlayerMovment>().Reset();
+
     }
 
     // Update is called once per frame
@@ -83,6 +90,7 @@ public class GameManger : MonoBehaviour {
     {
         Score.text = (int.Parse(Score.text) + 1).ToString();
         MonsterManager.GetComponent<MonsterManger>().ScoreChanged(int.Parse(Score.text));
+        killAll.GetComponent<KillAll>().IncreaseAmount();
     }
 
     void DisableStartPage()

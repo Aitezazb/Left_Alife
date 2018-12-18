@@ -23,7 +23,6 @@ public class PlayerMovment : MonoBehaviour {
     public int Driection; //0 for left; and 1 for right
     private bool OnGround;
 	void Start () {
-       // Movespeed = 80;
         JumpSpeed = 360;
         InGame = false;
         OnGround = true;
@@ -77,6 +76,16 @@ public class PlayerMovment : MonoBehaviour {
             }
         }
     }
+
+    public void Reset()
+    {
+        InGame = false;
+        OnGround = true;
+        Driection = 1;
+        clicked_Left = false;
+        clicked_Right = false;
+    }
+
     public void RigidBody_Add()
     {
         InGame = true;

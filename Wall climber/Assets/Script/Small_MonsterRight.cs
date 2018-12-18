@@ -53,6 +53,10 @@ public class Small_MonsterRight : MonoBehaviour
         {
             killMoster();
         }
+        if (coll.gameObject.tag == "RainBullet")
+        {
+            killMoster();
+        }
 
     }
     void ReduceHealth()
