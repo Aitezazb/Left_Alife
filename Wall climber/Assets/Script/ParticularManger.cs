@@ -8,7 +8,7 @@ public class ParticularManger : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Debug.Log(BloodPrefab.transform.position.z);
+
 	}
 	
 	// Update is called once per frame
@@ -22,9 +22,6 @@ public class ParticularManger : MonoBehaviour {
         //_transform.z = -4.115f;
         _transform.z = BloodPrefab.transform.position.z;
         var s = Instantiate(BloodPrefab, _transform, Quaternion.identity);
-        if(s != null)
-        {
-            Debug.Log(s.transform.position.z);
-        }
+        
     }
 }

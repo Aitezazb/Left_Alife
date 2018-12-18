@@ -8,9 +8,14 @@ public class MonsterManger: MonoBehaviour {
 
     public Transform MonsterPoint_Left;
     public Transform MonsterPoint_Right;
+    public Transform bigMonsterPoint_Left;
+    public Transform bigMonsterPoint_Right;
 
     public GameObject Left_SmallMonster;
     public GameObject Right_SmallMonster;
+
+
+
     public GameObject Left_BigMonster;
     public GameObject Right_BigMonster;
 
@@ -19,7 +24,7 @@ public class MonsterManger: MonoBehaviour {
 
     
 
-    private int score;
+    //private int score;
 
     public bool inGame { get; internal set; }
     
@@ -32,7 +37,6 @@ public class MonsterManger: MonoBehaviour {
         inGame = false;
         SmallMonster_ReapeatTime = 9f;
         BigMonster_ReapeatTime = 20f;
-        score = int.Parse(Currentscore.text);
         
     }
 
@@ -52,11 +56,11 @@ public class MonsterManger: MonoBehaviour {
        
 	}
 
-    internal void ScoreChanged()
+    public void ScoreChanged(int s)
     {
         if (inGame == true)
         {
-            switch (score)
+            switch (s)
             {
                 //case 0: { Start_SmallMonster(); break; } //SmallMonsterstart
                 case 10: { Start_BigMonster(); break; } //BigMonsterstart
@@ -70,32 +74,32 @@ public class MonsterManger: MonoBehaviour {
         }
     }
 
-    internal void GameStarted()
+    public void GameStarted()
     {
         inGame = true;
-        ScoreChanged();
         Start_SmallMonster();
     }
 
     public void Start_SmallMonster()
     {
-        
         InvokeRepeating("MakeLeft_SmallMonster", 5f, SmallMonster_ReapeatTime);
         InvokeRepeating("MakeRight_SmallMonster", 7f, (SmallMonster_ReapeatTime + 1f));
     }
     public void Start_BigMonster()
     {
-        //Debug.Log("this shouldnt be called");
+        Debug.Log("this is called");
         InvokeRepeating("MakeLeft_BigMonster", 1f, BigMonster_ReapeatTime);
         InvokeRepeating("MakeRight_BigMonster", 11f, (BigMonster_ReapeatTime + 1f));
     }
     public void MakeLeft_BigMonster()
     {
-        Instantiate(Left_BigMonster, MonsterPoint_Left.position, Quaternion.identity);
+        //Instantiate(Left_BigMonster, MonsterPoint_Left.position, Quaternion.identity);
+        Instantiate(Left_BigMonster,new Vector3(bigMonsterPoint_Left.position.x, bigMonsterPoint_Left.position.y,Left_BigMonster.transform.position.z), Quaternion.identity);
     }
     public void MakeRight_BigMonster()
     {
-        Instantiate(Right_BigMonster, MonsterPoint_Right.position, Quaternion.identity);
+        //Instantiate(Right_BigMonster, MonsterPoint_Right.position, Quaternion.identity);
+        Instantiate(Right_BigMonster, new Vector3(bigMonsterPoint_Right.position.x, bigMonsterPoint_Right.position.y, Right_BigMonster.transform.position.z), Quaternion.identity);
     }
      
     public void MakeLeft_SmallMonster()

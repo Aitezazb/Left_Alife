@@ -81,7 +81,7 @@ public class GameManger : MonoBehaviour {
     public void UpdateScore()
     {
         Score.text = (int.Parse(Score.text) + 1).ToString();
-        MonsterManager.GetComponent<MonsterManger>().ScoreChanged();
+        MonsterManager.GetComponent<MonsterManger>().ScoreChanged(int.Parse(Score.text));
     }
 
     void DisableStartPage()

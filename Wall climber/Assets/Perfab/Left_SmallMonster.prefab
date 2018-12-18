@@ -90,7 +90,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1145978084394890}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -4, y: -0.64, z: 0}
+  m_LocalPosition: {x: -3.2304783, y: 0.13940352, z: 0}
   m_LocalScale: {x: 2.5870943, y: 2.4953377, z: 1}
   m_Children:
   - {fileID: 224996285541634686}
@@ -144,8 +144,9 @@ PolygonCollider2D:
     - - {x: 0.085, y: 0.175}
       - {x: -0.044999998, y: 0.175}
       - {x: -0.145, y: 0.065}
-      - {x: -0.145, y: -0.345}
-      - {x: 0.105, y: -0.345}
+      - {x: -0.16874222, y: -0.32038498}
+      - {x: -0.038993888, y: -0.32284647}
+      - {x: 0.0955032, y: -0.32530797}
       - {x: 0.125, y: -0.33499998}
       - {x: 0.145, y: -0.235}
       - {x: 0.145, y: 0.074999996}
@@ -366,7 +367,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000033579767, y: -0.0030000005}
+  m_AnchoredPosition: {x: 0.000033587217, y: -0.0029999986}
   m_SizeDelta: {x: 0.00005699694, y: -0.0060000047}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224586178739609660
@@ -384,7 +385,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000000029802, y: 0}
+  m_AnchoredPosition: {x: 0.000000029802322, y: 0}
   m_SizeDelta: {x: 0.00000011921, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224996285541634686
