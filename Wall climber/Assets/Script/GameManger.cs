@@ -15,6 +15,10 @@ public class GameManger : MonoBehaviour {
     public GameObject BuyCoinsPage;
     public GameObject UpgradeGuns;
     public GameObject killAll;
+    public GameObject FreeCoin;
+    public Text currentCoin;
+   
+
     public CameraShake cameraShake;
 
     public GameObject TiggerDialogue;
@@ -40,6 +44,7 @@ public class GameManger : MonoBehaviour {
         ShowMainMenu();
         BuyCoinsPage.SetActive(true);
         ResetScore();
+        FreeCoin.GetComponent<FreeCoin>().CancelInvoke();
     }
     public void ShowMainMenu()
     {
@@ -90,6 +95,7 @@ public class GameManger : MonoBehaviour {
         EnableGameEnviroment();
         Player.SetActive(true);
         BuyCoinsPage.SetActive(true);
+        FreeCoin.GetComponent<FreeCoin>().StartInvoking();
     }
 
     public void UpdateScore()
@@ -124,5 +130,9 @@ public class GameManger : MonoBehaviour {
         Player.SetActive(false);
         BuyCoinsPage.SetActive(false);
         UpgradeGuns.SetActive(false);
+    }
+    public void IncreaseCoin()
+    {
+        currentCoin.text = (int.Parse(currentCoin.text) + 1).ToString();
     }
 }
