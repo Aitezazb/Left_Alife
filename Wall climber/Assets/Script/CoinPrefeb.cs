@@ -10,17 +10,27 @@ public class CoinPrefeb : MonoBehaviour {
         gameManger = GameObject.Find("GameManger");
         Destroy(gameManger, 3f);
 	}
-    void OnTriggerEnter(Collider2D col)
+    void OnCollisionEnter2D(Collision2D coll)
     {
-        if (col.gameObject.tag == "Player")
+        if (coll.gameObject.tag == "Player")
         {
             Destroy(gameObject);
             gameManger.GetComponent<GameManger>().IncreaseCoin();
+
         }
-        //spriteMove = -0.1f;
+        if (coll.gameObject.tag == "Emeny")
+        {
+            Destroy(gameObject);
+            gameManger.GetComponent<GameManger>().DecreaseScore();
+        }
+        if (coll.gameObject.tag == "Bullet")
+        {
+            Destroy(gameObject);
+        }
     }
-    // Update is called once per frame
-    void Update () {
+
+        // Update is called once per frame
+        void Update () {
 		
 	}
 }

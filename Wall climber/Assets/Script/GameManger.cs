@@ -25,6 +25,16 @@ public class GameManger : MonoBehaviour {
 
     public GameObject MonsterManager;
 
+    public void DecreaseScore()
+    {
+        var s = int.Parse(Score.text);
+        if(s > 0)
+        {
+            s -= 1;
+        }
+        Score.text = s.ToString();
+    }
+
     public Text HighScore;
     public Text Score;
 
