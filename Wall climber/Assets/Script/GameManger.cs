@@ -17,6 +17,8 @@ public class GameManger : MonoBehaviour {
     public GameObject killAll;
     public CameraShake cameraShake;
 
+    public GameObject TiggerDialogue;
+
     public GameObject MonsterManager;
 
     public Text HighScore;
@@ -45,7 +47,6 @@ public class GameManger : MonoBehaviour {
         CloseAllPages();
         Player.SetActive(true);
         Destroy(Player.GetComponent<Rigidbody2D>());
-        
         ResetPlayer();
         Player.transform.position = PlayerPosition_Startmenu.transform.position;
         MainPage_UI.SetActive(true);
@@ -74,17 +75,21 @@ public class GameManger : MonoBehaviour {
     }
     public void StartGame_Onclick()
     {
-        InGame = true;
-        MonsterManager.GetComponent<MonsterManger>().GameStarted();
-        StartGame();
+        TiggerDialogue.GetComponent<DialogTrigger>().TriggerDialog();
+        CloseAllPages();
         Player.SetActive(true);
     }
 
-    private void StartGame()
+    public void StartGame()
     {
+        InGame = true;
+        MonsterManager.GetComponent<MonsterManger>().GameStarted();
+        //StartGame();
         DisableStartPage();
         AddPlayerComponents();
         EnableGameEnviroment();
+        Player.SetActive(true);
+        BuyCoinsPage.SetActive(true);
     }
 
     public void UpdateScore()

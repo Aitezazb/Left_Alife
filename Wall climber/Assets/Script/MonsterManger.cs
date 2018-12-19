@@ -87,7 +87,7 @@ public class MonsterManger: MonoBehaviour {
     }
     public void Start_BigMonster()
     {
-        Debug.Log("this is called");
+        //Debug.Log("this is called");
         InvokeRepeating("MakeLeft_BigMonster", 1f, BigMonster_ReapeatTime);
         InvokeRepeating("MakeRight_BigMonster", 11f, (BigMonster_ReapeatTime + 1f));
     }
