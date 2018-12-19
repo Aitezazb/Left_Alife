@@ -8,20 +8,22 @@ public class CoinPrefeb : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         gameManger = GameObject.Find("GameManger");
-        Destroy(gameManger, 3f);
-	}
+        Destroy(gameObject, 3f);
+    }
     void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.tag == "Player")
         {
-            Destroy(gameObject);
             gameManger.GetComponent<GameManger>().IncreaseCoin();
+            Destroy(gameObject);
+            
 
         }
         if (coll.gameObject.tag == "Emeny")
         {
-            Destroy(gameObject);
             gameManger.GetComponent<GameManger>().DecreaseScore();
+            Destroy(gameObject);
+            
         }
         if (coll.gameObject.tag == "Bullet")
         {
