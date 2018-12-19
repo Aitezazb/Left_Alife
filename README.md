@@ -1,2 +1,2 @@
-# Left Alife
-Just a small game on zombies :) 
+# Left Alive
+Just a small game on zombies
